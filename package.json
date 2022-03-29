@@ -1,0 +1,23 @@
+{
+  "name": "my_crypto",
+  "version": "1.0.0",
+  "description": "a crypto tracking app",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaguirre7/my_crypto.git"
+  },
+  "keywords": [
+    "crypto"
+  ],
+  "author": "The Amazing Four",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaguirre7/my_crypto/issues"
+  },
+  "homepage": "https://github.com/aaguirre7/my_crypto#readme"
+}
