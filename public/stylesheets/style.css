@@ -47,6 +47,10 @@ header h1 {
 
 }
 
+footer {
+  font-size: medium;
+}
+
 .navcontainer {
   width: 100%;
 }
@@ -73,6 +77,11 @@ a {
 
 a:active {
  color: #CE1995;
+}
+
+p {
+  font-size: large;
+  font-family:medium;
 }
 
 .backgroundImage {
