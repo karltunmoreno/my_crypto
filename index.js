@@ -62,7 +62,7 @@ async function coinData() {
     return coinArray;
   } catch (error) {}
 }
-
+console.log(coinArray);
 const app = express();
 
 app.get("/api/coin-feed", async (req, res) => {
