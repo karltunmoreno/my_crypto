@@ -11,18 +11,18 @@ Coins.init(
     primaryKey: true,
     autoIncrement: true
     },
-    rank: {
-      type: DataTypes.INTEGER,
+    user_id:{
+      type:DataTypes.INTEGER,
       allowNull: false,
     },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    coin_name:{
+      type:DataTypes.STRING,
+      allowNull: false  
     },
-    price:{
-      type: DataTypes.STRING,
-      allowNull:false
-    },
+    amount:{
+      type:DataTypes.INTEGER,
+      allowNull: false
+    }
   },
   {
     sequelize,
