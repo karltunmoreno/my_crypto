@@ -19,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/aaguirre7/my_crypto/issues"
   },
-  "homepage": "https://github.com/aaguirre7/my_crypto#readme"
+  "homepage": "https://github.com/aaguirre7/my_crypto#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.3",
+    "express-session": "^1.17.2"
+  }
 }
