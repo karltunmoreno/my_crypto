@@ -1,15 +1,15 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Coins extends Model {}
+class Coins extends Model {};
 
 Coins.init(
   {
     id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true
+    type: DataTypes.INTEGER,
+    allowNull: false,
+    primaryKey: true,
+    autoIncrement: true
     },
     rank: {
       type: DataTypes.INTEGER,
@@ -20,7 +20,7 @@ Coins.init(
       allowNull: false,
     },
     price:{
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull:false
     },
   },
@@ -32,4 +32,6 @@ Coins.init(
   }
 );
 
+
 module.exports = Coins;
+

@@ -24,14 +24,9 @@ async function coinData() {
       "rank",
       "name",
       "price",
-      "24h%",
-      "7d%",
-      "marketCap",
-      "volume",
-      "circulatingSupply",
     ];
 
-    const coinArray = [];
+    const coinArray= [];
 
     // pass in dataselector
     $(dataSelector).each((parentIdx, parentElem) => {
@@ -41,23 +36,26 @@ async function coinData() {
       if (parentIdx <= 9) {
         $(parentElem)
           .children()
-          .each((textIdx, textElem) => {
+          .each((textIdx = 0, textElem) => {
+            
             let textValue = $(textElem).text();
 
-            if (coinLimit === 1 || coinLimit === 6) {
+            if (coinLimit === 1 || coinLimit === 1) {
               textValue = $("p:first-child", $(textElem).html()).text();
             }
 
             if (textValue) {
               coinObject[coinKeys[coinLimit]] = textValue;
               coinLimit++;
+              
             }
+            textIdx ++;
           });
         coinArray.push(coinObject);
-        console.log("--------------", coinLimit, "-------------------------");
-        console.log(coinObject);
-        //console.log(`----------`);
-        //console.log(coinArray[coinLimit]);
+        //console.log("--------------", coinLimit, "-------------------------");
+        //console.log(coinObject);
+        console.log(`----------`);
+        console.log(coinArray[coinLimit]);
       }
     });
     return coinArray;
@@ -69,7 +67,7 @@ app.get('/api/coin-feed', async (req, res) => {
     const coinFeed = await coinData();
 
     return res.status(200).json({
-      result: coinFeed,
+      coinFeed,
     });
   } catch (err) {
     return res.status(500).json({
@@ -82,3 +80,4 @@ app.listen(3000, () => {
   console.log("UP and Running on port 3000");
 });
 
+module.exports = coinData;
