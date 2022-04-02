@@ -4,9 +4,3 @@ const rawCoin = require ("../index.js");
 
 
 
-const feedData = [
-    rank: ,
-    name: ,
-    price:  
-
-]

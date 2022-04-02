@@ -2,6 +2,7 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const express = require("express");
 
+
 async function coinData() {
   try {
     const coinUrl = "https://coinmarketcap.com/";
@@ -48,24 +49,22 @@ async function coinData() {
             }
 
             if (textValue) {
-              coinObject[coinKeys[coinLimit]] = textValue
+              coinObject[coinKeys[coinLimit]] = textValue;
               coinLimit++;
             }
           });
         coinArray.push(coinObject);
-        console.log("--------------",coinLimit,"-------------------------");
-              console.log(coinObject);
+        console.log("--------------", coinLimit, "-------------------------");
+        console.log(coinObject);
         //console.log(`----------`);
         //console.log(coinArray[coinLimit]);
       }
     });
     return coinArray;
   } catch (error) {}
-}
-console.log(coinArray);
+};
 const app = express();
-
-app.get("/api/coin-feed", async (req, res) => {
+app.get('/api/coin-feed', async (req, res) => {
   try {
     const coinFeed = await coinData();
 
@@ -82,3 +81,4 @@ app.get("/api/coin-feed", async (req, res) => {
 app.listen(3000, () => {
   console.log("UP and Running on port 3000");
 });
+
