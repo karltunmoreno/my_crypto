@@ -1,7 +1,7 @@
 // import all models
 const User = require('./user');
 const Coins = require('./coins');
-const { post } = require('../controllers');
+
 
 // create association
 Coins.belongsTo(User, {
