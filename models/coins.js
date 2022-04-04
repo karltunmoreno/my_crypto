@@ -23,7 +23,7 @@ Coins.init(
       type:DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'users',
+        model: 'User',
         key:'id'
       }
     },
@@ -32,7 +32,7 @@ Coins.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'coins'
+    modelName: 'Coins'
   }
 );
 
