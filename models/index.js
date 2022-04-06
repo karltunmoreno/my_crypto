@@ -9,4 +9,4 @@ Coins.belongsTo(User, {
 })
 
 
-module.exports = {User, Coins };
+module.exports = {User, Coins};

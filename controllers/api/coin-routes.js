@@ -1,9 +1,10 @@
 const router = require('express').Router();
-const  Coins = require("../../models");
-
+const {User, Coins} = require("../../models");
+//The `/api/coins` endpoint
+ // find all coins
 /**
  * @swagger
- * /api/coin:
+ * /api/coins:
  *  get:
  *      summary: request All Coins
  *      description: request all coins
@@ -12,19 +13,14 @@ const  Coins = require("../../models");
  *              description: succesfull
  */
  router.get('/', (req, res) => {
-    // find all coins
+   console.log(Coins,"ln16");
       Coins.findAll({
-        include: {
-            model: Coins,
-            attributes: ['id', 'coin_name', 'amount', 'user_id']
-        }
     })
-    .then(dbCoinData => {
-        if (!dbCoinData) {
+    .then(dbCoinsData => {
+        if (!dbCoinsData) {
             res.status(404).json({ message: 'No coins found' });
-            return;
-        }
-        res.json(dbCoinData);
+            return;}
+        res.json(dbCoinsData);
     })
     .catch(err => {
         console.log(err);
@@ -64,6 +60,7 @@ const  Coins = require("../../models");
  *
  */
 router.post('/', (req, res) => {
+  console.log(Coins,"ln67");
     /* req.body should look like this...
       {
         coin_name: "BTC",
@@ -76,12 +73,66 @@ router.post('/', (req, res) => {
       amount: req.body.amount,
       user_id: req.body.user_id,    
     })
-      .then(dbCoinData => res.json(dbCoinData)) 
+      .then(dbCoinsData => res.json(dbCoinsData)) 
       .catch((err) => {
         console.log(err);
         res.status(500).json(err);
       });
   });
+
+/**
+*@swagger
+* /api/coins/{id}:
+*   put:
+*      summary: change coins
+*      consumes:
+*       - application/json
+*      parameters:
+*       - in: path
+*         name: user id
+*         content:
+*          application/json:
+*          schema:
+*            type: object
+*          properties:
+*            id:
+*              type: integer
+*       - in: body
+*         name: user
+*         description: change a coin for a user id:.
+*         schema:
+*          type: object
+*          properties:
+*            coin name:
+*              type: string
+*            amount:
+*              type: integer
+*         
+*responses:
+*       201:
+*        description: coin modified
+*/
+router.put("/:id", (req, res) => {
+
+  // pass in req.body instead to only update what's passed through
+  Coins.update(req.body, {
+    individualHooks: true,
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((dbCoinsData) => {
+      if (!dbCoinsData) {
+        res.status(404).json({ message: "No coin found with this id" });
+        return;
+      }
+      res.json(dbCoinsData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 
 module.exports = router;  
 
