@@ -82,31 +82,26 @@ router.post('/', (req, res) => {
 
 /**
 *@swagger
-* /api/coins/{id}:
+* /api/coins/{coinid}}:
 *   put:
 *      summary: change coins
 *      consumes:
 *       - application/json
 *      parameters:
 *       - in: path
-*         name: user id
-*         content:
-*          application/json:
-*          schema:
-*            type: object
-*          properties:
-*            id:
-*              type: integer
+*         name: coinid
+*         type: integer
+*         required: true
 *       - in: body
 *         name: user
-*         description: change a coin for a user id:.
+*         description: change a coin for a user.
 *         schema:
 *          type: object
 *          properties:
 *            coin name:
 *              type: string
 *            amount:
-*              type: integer
+*              type: string
 *         
 *responses:
 *       201:
