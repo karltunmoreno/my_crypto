@@ -126,6 +126,14 @@
   margin: 20px;
 }
 
+.converter-cointainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: 380px;
+}
+
 .container {
   width: 240px;
   text-align: center;
@@ -185,4 +193,8 @@ h1:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+}
+
+.exchange-img {
+  margin-left: 160px;
 }
