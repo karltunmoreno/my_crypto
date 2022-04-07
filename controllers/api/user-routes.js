@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Coins } = require("../../models");
+const { User, Coins, Crypto } = require("../../models");
 //The `/api/users` endpoint
 // get all users
 /**
