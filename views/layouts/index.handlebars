@@ -39,7 +39,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3"><img src="/images/My Crypto (1).svg" alt="logo" width="130px" height="130px"></div>
+                <div class="sidebar-brand-text mx-3 "><img src="/images/1a.png" alt="logo" width="75px" height="75px"></div>
             </a>
 
             <!-- Divider -->
@@ -63,7 +63,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/main">
+                <a class="nav-link" href="/">
                     <i class="fas fa-fw fa-cog"></i>
                     <span>Coin Market</span>
                 </a>
@@ -120,7 +120,11 @@
             <div id="content">
 
                 <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <nav class="navbar navbar-expand navbar-light topbar mb-4 static-top shadow" style="background-image: linear-gradient(
+    270deg,
+    rgb(227, 168, 0),
+    rgba(206, 25, 149)
+  );;">
 
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
@@ -150,16 +154,19 @@
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
-                        <div class="dropdown show">
+                         <div class="dropdown show">
                             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Login/Log out
+                            Login
                             </a>
 
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                           {{#if loggedIn}}
+                          <a class="dropdown-item" id="logout" href="/">Log Out</a>
+                            {{else}}
                             <a class="dropdown-item" href="/login">Login</a>
-                            <a class="dropdown-item" href="#">Log Out</a>
+                             {{/if}}
                         </div>
-                        </div>
+                        </div>  
                             <!-- Dropdown - User Information -->
                         {{!-- </li> --}}
 
@@ -168,7 +175,18 @@
                 </nav>
                 <!-- End of Topbar -->
       {{{body}}}
-     
+     <footer class="text-center text-black" style="background-color: white;">
+  <!-- Grid container -->
+  <div class="container p-4"></div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color: rgba(206, 25, 149;">
+    © 2022 Copyright:
+    <a class="text-white" href="#">My Crypto</a>
+  </div>
+  <!-- Copyright -->
+</footer>
     </div>
 
     <script
@@ -186,5 +204,9 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
+    <script src="/javascript/converter.js"></script>
+    {{#if loggedIn}}
+  <script src="/javascript/logout.js"></script>
+  {{/if}}
   </body>
 </html>
