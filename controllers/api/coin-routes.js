@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const {User, Coins} = require("../../models");
 //The `/api/coins` endpoint
- // find all coins
+// find all coins
 /**
  * @swagger
  * /api/coins:
@@ -13,7 +13,6 @@ const {User, Coins} = require("../../models");
  *              description: succesfull
  */
  router.get('/', (req, res) => {
-   console.log(Coins,"ln16");
       Coins.findAll({
     })
     .then(dbCoinsData => {
@@ -27,7 +26,46 @@ const {User, Coins} = require("../../models");
         res.status(500).json(err)
     });
   });
-
+/**
+ * @swagger
+ * /api/coins/{user_id}:
+ *  get:
+ *      summary: request Coins by User
+ *      description: request Coins by User
+ *      parameters:
+ *          - in: path
+ *            name: user_id
+ *      responses:
+ *          '200':
+ *              description: single User Coins
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          type: object
+ *                          properties:
+ *                              user_id:
+ *                                  type:interger
+ *                              name:
+ *                                  type: string
+ */
+ router.get("/:user_id", (req, res) => {
+  Coins.findAll({
+    where: {
+      user_id: req.params.user_id,
+    },
+  })
+    .then((dbCoinsData) => {
+      if (!dbCoinsData) {
+        res.status(404).json({ message: "User has no Coins stored" });
+        return;
+      }
+      res.json(dbCoinsData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
   // create new coin
 /**
  * @swagger
@@ -60,7 +98,6 @@ const {User, Coins} = require("../../models");
  *
  */
 router.post('/', (req, res) => {
-  console.log(Coins,"ln67");
     /* req.body should look like this...
       {
         coin_name: "BTC",
@@ -128,4 +165,44 @@ router.put("/:id", (req, res) => {
 });
 
 module.exports = router;  
+/**
+ * @swagger
+ * /api/coins/{id}:
+ *  delete:
+ *      summary: Delete coins by ID
+ *      description: Delete coins by ID
+ *      parameters:
+ *          - in: path
+ *            name: id
+ *      responses:
+ *          '200':
+ *              description: coin deleted Deleted
+ *              content:
+ *                  application/json:
+ *                      schema:
+ *                          type: object
+ *                          properties:
+ *                              id:
+ *                                  type:interger
+ *                              name:
+ *                                  type: string
+ */
+ router.delete("/:id", (req, res) => {
+  Coins.destroy({
+    where: {
+      id: req.params.id,
+    },
+  })
+    .then((dbCoinsData) => {
+      if (!dbCoinsData) {
+        res.status(404).json({ message: "No coin found with this id" });
+        return;
+      }
+      res.json(dbCoinsData);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
+});
 

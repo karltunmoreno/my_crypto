@@ -8,7 +8,7 @@ if (process.env.JAWSDB_URL){
 } else {
 // create connection to our db
     sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PW, {
-        host: '172.24.16.1',
+        host: '172.19.112.1',
         dialect: 'mysql',
         port: 3306
 });
