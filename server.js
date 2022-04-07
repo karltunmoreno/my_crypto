@@ -5,7 +5,7 @@ const exphbs = require("express-handlebars");
 const swaggerJsDoc =require('swagger-jsdoc');
 const swaggerUI = require('swagger-ui-express');
 const controllers = require('./controllers');
-const crypto = require("./utils/crypto")
+
 
 
 const app = express();
@@ -43,7 +43,7 @@ const sess = {
     db: sequelize,
   }),
 };
-console.log(crypto);
+
 app.use(session(sess));
 
 const helpers = require("./utils/helpers");
