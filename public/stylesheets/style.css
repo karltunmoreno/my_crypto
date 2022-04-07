@@ -1,0 +1,101 @@
+@media (hover: hover) {
+  #creditcard {
+    /*  set start position */
+    transform: translateY(110px);
+    transition: transform 0.1s ease-in-out;
+    /*  set transition for mouse enter & exit */
+  }
+
+  #money {
+    /*  set start position */
+    transform: translateY(180px);
+    transition: transform 0.1s ease-in-out;
+    /*  set transition for mouse enter & exit */
+  }
+
+  button:hover #creditcard {
+    transform: translateY(0px);
+    transition: transform 0.2s ease-in-out;
+    /*  overide transition for mouse enter */
+  }
+
+  button:hover #money {
+    transform: translateY(0px);
+    transition: transform 0.3s ease-in-out;
+    /*  overide transition for mouse enter */
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.button:hover .button__text span {
+  transform: translateY(-0.25rem);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* styling */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+.button {
+  border: none;
+  outline: none;
+  background-color: purple;
+  padding: 0.75rem 70px 0.75rem 1.6rem;
+  width: 170px;
+  margin-left: 25px;
+  position: relative;
+  border-radius: 8px;
+  letter-spacing: 0.4px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button__svg {
+  position: absolute;
+  overflow: visible;
+  bottom: 6px;
+  right: 1.1rem;
+  height: 120%;
+}
+/* end of my-crypto button */
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-image: linear-gradient(
+    180deg,
+    rgb(227, 168, 0, 0.3),
+    rgba(206, 25, 149, 0.3)
+  );
+}
+
+.coin-title-card {
+  margin-left: 15px;
+  margin-bottom: 20px;
+}
+
+/* modal styling */
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}

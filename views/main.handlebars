@@ -1,0 +1,37 @@
+<div class="coin-title-card">
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="/images/1a.png" alt="Card image cap" />
+    <div class="card-body">
+      <h3 class="card-text">Coin Market</h3>
+    </div>
+  </div>
+</div>
+
+<table class="table table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">24</th>
+      <th scope="col">7D</th>
+      <th scope="col">Market Cap</th>
+      <th scope="col">Volume</th>
+      <th scope="col">Circulating Supply</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each coins}}
+      <tr>
+        <th scope="row">{{rank}}</th>
+        <td>{{name}}</td>
+        <td>{{price}}</td>
+        <td>{{twentyFourHour}}</td>
+        <td>{{sevenDay}}</td>
+        <td>{{marketCap}}</td>
+        <td>{{volume}}</td>
+        <td>{{circulatingSupply}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
