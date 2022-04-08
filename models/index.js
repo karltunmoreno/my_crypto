@@ -1,10 +1,13 @@
 // import all models
-const Post = require('./Post');
 const User = require('./user');
-const Vote = require('./Vote');
-const Comment = require('./Comment');
-
-// create associations
+const Coins = require('./coins');
 
 
-module.exports = { User, Post, Vote, Comment };
+
+// create association
+Coins.belongsTo(User, {
+    foreignKey: 'user_id'
+})
+
+
+module.exports = {User, Coins};

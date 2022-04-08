@@ -1,0 +1,200 @@
+@media (hover: hover) {
+  #creditcard {
+    /*  set start position */
+    transform: translateY(110px);
+    transition: transform 0.1s ease-in-out;
+    /*  set transition for mouse enter & exit */
+  }
+
+  #money {
+    /*  set start position */
+    transform: translateY(180px);
+    transition: transform 0.1s ease-in-out;
+    /*  set transition for mouse enter & exit */
+  }
+
+  button:hover #creditcard {
+    transform: translateY(0px);
+    transition: transform 0.2s ease-in-out;
+    /*  overide transition for mouse enter */
+  }
+
+  button:hover #money {
+    transform: translateY(0px);
+    transition: transform 0.3s ease-in-out;
+    /*  overide transition for mouse enter */
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-0.25rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.button:hover .button__text span {
+  transform: translateY(-0.25rem);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* styling */
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+
+.button {
+  border: none;
+  outline: none;
+  background-color: purple;
+  padding: 0.75rem 70px 0.75rem 1.6rem;
+  width: 170px;
+  margin-left: 25px;
+  position: relative;
+  border-radius: 8px;
+  letter-spacing: 0.4px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  cursor: pointer;
+  box-shadow: rgba(0, 9, 61, 0.2) 0px 4px 8px 0px;
+}
+
+.button:active {
+  transform: translateY(1px);
+}
+
+.button__svg {
+  position: absolute;
+  overflow: visible;
+  bottom: 6px;
+  right: 1.1rem;
+  height: 120%;
+}
+/* end of my-crypto button */
+
+.table-hover tbody tr:hover td,
+.table-hover tbody tr:hover th {
+  background-image: linear-gradient(
+    180deg,
+    rgb(227, 168, 0, 0.3),
+    rgba(206, 25, 149, 0.3)
+  );
+}
+/* main card styling */
+.coin-title-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* login styling */
+.login-container {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 400px;
+  padding: 30px;
+  margin: 20px;
+}
+
+/* logout styling */
+.signup-container {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  width: 600px;
+  padding: 30px;
+  margin: 20px;
+}
+
+.converter-cointainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin-left: 380px;
+}
+
+.container {
+  width: 240px;
+  text-align: center;
+  cursor: pointer;
+  margin: 75px;
+}
+
+.container:first-child {
+  width: 150px;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 400;
+}
+
+h1:hover {
+  color: rgb(232, 187, 74);
+}
+
+.list {
+  list-style: none;
+  width: 100px;
+  padding: 0;
+  margin: 5px auto 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 5px 28px -10px rgba(20, 20, 20, 0.8);
+  overflow: hidden;
+
+  transition: 220ms ease-in-out;
+}
+
+.expand {
+  max-height: 300px;
+}
+
+.li-list {
+  padding: 5px 0;
+  border-bottom: 1px solid rgb(222, 222, 222);
+  transition: background 100ms;
+}
+
+.li-list:first-child {
+  border-top: 4px solid rgb(232, 187, 74);
+}
+
+.li-list:last-child {
+  border: none;
+}
+
+.li-list:hover {
+  background-color: rgb(235, 235, 237);
+}
+
+.modal-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.exchange-img {
+  margin-left: 160px;
+}
