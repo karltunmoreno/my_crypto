@@ -139,11 +139,17 @@ router.post("/", (req, res) => {
  *       201:
  *         description: logged in
  */
-router.post("/api/login", (req, res) => {
+router.post("/login", (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
-      email: req.body.email,
+      _email: req.body.email,
+      get email() {
+        return this._email;
+      },
+      set email(value) {
+        this._email = value;
+      },
     },
   }).then((dbUserData) => {
     if (!dbUserData) {
