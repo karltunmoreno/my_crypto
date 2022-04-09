@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 async function getApiData() {
   const request = await fetch("/api/crypto")
   const data = await request.json();
