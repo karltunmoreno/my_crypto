@@ -1,5 +1,7 @@
 const router = require("express").Router();
 const axios = require('axios');
+const CircularJSON = require('circular-json');
+
 var liveCoins = [];
 async function getCrypto () {
     var config = {
