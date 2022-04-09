@@ -5,11 +5,11 @@ const { User } = require("../models");
 const { coinsScrap } = require("../models/coinsScrap");
 
 router.get("/", (req, res) => {
-  res.render("main", { layout: "index", coins: coinsScrap, user: User });
+  res.render("main", { layout: "index", coins: coinsScrap, loggedIn: req.session.loggedIn });
 });
 
 router.get("/login", (req, res) => {
-  res.render("login", { layout: "index", user: User });
+  res.render("login", { layout: "index" });
 });
 
 router.get("/myCrypto", (req, res) => {
