@@ -139,38 +139,32 @@ router.post("/", (req, res) => {
  *       201:
  *         description: logged in
  */
-router.post("/login", (req, res) => {
+ router.post('/login', (req, res) => {
   // expects {email: 'lernantino@gmail.com', password: 'password1234'}
   User.findOne({
     where: {
-      email: req.body.email,
-      get email() {
-        return this.email;
-      },
-      set email(value) {
-        this.email = value;
-      },
-    },
-  }).then((dbUserData) => {
+      email: req.body.email
+    }
+  }).then(dbUserData => {
     if (!dbUserData) {
-      res.status(400).json({ message: "No user with that email address!" });
+      res.status(400).json({ message: 'No user with that email address!' });
       return;
     }
 
     const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(400).json({ message: "Incorrect password!" });
+      res.status(400).json({ message: 'Incorrect password!' });
       return;
     }
 
-    req.session.save(function () {
-        req.session.user_id = dbUserData.id;
-        req.session.username = dbUserData.username;
-        req.session.loggedIn = true;
-
-        res.json({ user: dbUserData, message: "You are now logged in!" });
-      });
+    req.session.save(() => {
+      req.session.user_id = dbUserData.id;
+      req.session.username = dbUserData.username;
+      req.session.loggedIn = true;
+  
+      res.json({ user: dbUserData, message: 'You are now logged in!' });
+    });
   });
 });
 

@@ -1,20 +1,14 @@
-const axios = require('axios');
+// const fetch = require('node-fetch');
 
-async function getApiData() {
-    const config = {
-        method: 'get',
-        url: '/api/crypto',
-        }
-    const data = await axios(config)
-
-    console.log(JSON.stringify(data.data));
-
-    return res.status(200).json(
-        console.log(data)
-    );
-    return data.data;
-}
-const coinsData = getApiData();
+// async function getApiData() {
+//   const request = await fetch("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest")
+//   const data = await request.json();
+//   console.log(data)
+//   return data;
+// }
+// const coinsData = getApiData();
 
 
-exports.coinsData = coinsData;
+// exports.coinsData = coinsData;
+
+
