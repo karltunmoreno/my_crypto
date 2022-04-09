@@ -1,3 +1,5 @@
+import fetch from 'node-fetch';
+
 async function getApiData() {
     const config = {
         method: 'get',

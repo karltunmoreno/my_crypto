@@ -4,6 +4,7 @@ const { User } = require("../models");
 // coin JSON data
 const { coinsData } = require("../models/coinsData");
 
+
 router.get("/", (req, res) => {
   res.render("main", { layout: "index", coins: coinsData, loggedIn: req.session.loggedIn });
 });

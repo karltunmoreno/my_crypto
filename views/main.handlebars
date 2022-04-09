@@ -27,14 +27,13 @@
   <tbody>
     {{#each coins}}
       <tr>
-        <th scope="row">{{rank}}</th>
+        <th scope="row">{{cmc_rank}}</th>
         <td>{{name}}</td>
-        <td>{{price}}</td>
-        <td>{{twentyFourHour}}</td>
-        <td>{{sevenDay}}</td>
-        <td>{{marketCap}}</td>
-        <td>{{volume}}</td>
-        <td>{{circulatingSupply}}</td>
+        <td>{{qoute.USD.price}}</td>
+        <td>{{qoute.USD.percent_change_24h}}</td>
+        <td>{{qoute.USD.percent_change_7d}}</td>
+        <td>{{qoute.USD.market_cap}}</td>
+        <td>{{qoute.USD.volume_24h}}</td>
       </tr>
     {{/each}}
   </tbody>
