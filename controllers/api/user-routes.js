@@ -184,40 +184,40 @@ router.post("/logout", (req, res) => {
   }
 });
 /**
-*@swagger
-* /api/users/{id}:
-*   put:
-*      summary: change user
-*      consumes:
-*       - application/json
-*      parameters:
-*       - in: path
-*         name: id
-*         content:
-*          application/json:
-*          schema:
-*            type: object
-*          properties:
-*            id:
-*              type: interger
-*            name:
-*              type: string
-*       - in: body
-*         name: user
-*         description: write only the filed you want to modify of the user with id:.
-*         schema:
-*          type: object
-*          properties:
-*            username:
-*              type: string
-*            email:
-*              type: string
-*            password:
-*              type: string
-*responses:
-*       201:
-*        description: user modified
-*/
+ *@swagger
+ * /api/users/{id}:
+ *   put:
+ *      summary: change user
+ *      consumes:
+ *       - application/json
+ *      parameters:
+ *       - in: path
+ *         name: id
+ *         content:
+ *          application/json:
+ *          schema:
+ *            type: object
+ *          properties:
+ *            id:
+ *              type: interger
+ *            name:
+ *              type: string
+ *       - in: body
+ *         name: user
+ *         description: write only the filed you want to modify of the user with id:.
+ *         schema:
+ *          type: object
+ *          properties:
+ *            username:
+ *              type: string
+ *            email:
+ *              type: string
+ *            password:
+ *              type: string
+ *responses:
+ *       201:
+ *        description: user modified
+ */
 router.put("/:id", (req, res) => {
   // expects {username: 'Lernantino', email: 'lernantino@gmail.com', password: 'password1234'}
 
