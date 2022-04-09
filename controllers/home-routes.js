@@ -2,10 +2,10 @@ const router = require("express").Router();
 
 const { User } = require("../models");
 // coin JSON data
-const { coinsScrap } = require("../models/coinsScrap");
+const { coinsData } = require("../models/coinsData");
 
 router.get("/", (req, res) => {
-  res.render("main", { layout: "index", coins: coinsScrap, loggedIn: req.session.loggedIn });
+  res.render("main", { layout: "index", coins: coinsData, loggedIn: req.session.loggedIn });
 });
 
 router.get("/login", (req, res) => {
@@ -13,7 +13,7 @@ router.get("/login", (req, res) => {
 });
 
 router.get("/myCrypto", (req, res) => {
-  res.render("myCrypto", { layout: "index", coins: coinsScrap });
+  res.render("myCrypto", { layout: "index", coins: coinsData });
 });
 
 router.get("/coinConverter", (req, res) => {
