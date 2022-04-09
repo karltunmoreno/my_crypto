@@ -22,7 +22,6 @@ const sess = {
   }),
 };
 
-
 app.use(session(sess));
 
 //Extends: https://swagger.io/specification/#InfoObject
@@ -44,10 +43,6 @@ app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(swaggerDocs));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(controllers);
-
-
-
-
 
 const helpers = require("./utils/helpers");
 

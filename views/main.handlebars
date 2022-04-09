@@ -12,29 +12,28 @@
 </div>
 
 <table class="table table-hover">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Name</th>
-      <th scope="col">Price</th>
-      <th scope="col">24</th>
-      <th scope="col">7D</th>
-      <th scope="col">Market Cap</th>
-      <th scope="col">Volume</th>
-      <th scope="col">Circulating Supply</th>
-    </tr>
-  </thead>
-  <tbody>
-    {{#each coins}}
-      <tr>
-        <th scope="row">{{cmc_rank}}</th>
-        <td>{{name}}</td>
-        <td>{{qoute.USD.price}}</td>
-        <td>{{qoute.USD.percent_change_24h}}</td>
-        <td>{{qoute.USD.percent_change_7d}}</td>
-        <td>{{qoute.USD.market_cap}}</td>
-        <td>{{qoute.USD.volume_24h}}</td>
-      </tr>
-    {{/each}}
-  </tbody>
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">24</th>
+            <th scope="col">7D</th>
+            <th scope="col">Market Cap</th>
+            <th scope="col">Volume</th>
+            <th scope="col">Circulating Supply</th>
+        </tr>
+    </thead>
+    
+    <tbody>
+        
+        <tr>
+            {{#each coins}}
+            <th scope="row">{{this}}</th>
+            <td>{{name}}</td>
+            {{/each}}
+        </tr>
+        
+    </tbody>
+    
 </table>
