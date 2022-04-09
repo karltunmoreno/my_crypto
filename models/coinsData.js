@@ -7,11 +7,11 @@ const PORT = process.env.PORT || 3001;
 async function getApiData() {
     
     const request = await axios("http://localhost:" + PORT + "/api/crypto")
-    const data = await request;
+    const data = await request.data;
+    console.log(data)
+    return data
 
-    return data.data
-
-    console.log(data.data)
+    console.log(data)
      
 }
 const coinsData = getApiData;
