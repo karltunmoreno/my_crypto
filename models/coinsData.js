@@ -1,11 +1,11 @@
-import fetch from 'node-fetch';
+const axios = require('axios');
 
 async function getApiData() {
     const config = {
         method: 'get',
         url: '/api/crypto',
         }
-    const data = await rawait axios(config)
+    const data = await axios(config)
 
     console.log(JSON.stringify(data.data));
 
