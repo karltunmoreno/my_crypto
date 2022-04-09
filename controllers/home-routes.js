@@ -2,7 +2,7 @@ const router = require("express").Router();
 
 const { User } = require("../models");
 // coin JSON data
-const { coinsData } = require("../models/coinsData");
+const coinsData = require("../models/coinsData");
 
 
 router.get("/", (req, res) => {
