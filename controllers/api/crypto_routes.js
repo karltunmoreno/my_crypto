@@ -1,22 +1,6 @@
 const router = require("express").Router();
-const axios = require('axios');
-const CircularJSON = require('circular-json');
+var axios = require('axios');
 
-var liveCoins = [];
-async function getCrypto () {
-    var config = {
-    method: 'get',
-    url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?sort=cmc_rank&limit=100',
-    headers: { 
-        'X-CMC_PRO_API_KEY': 'd3bcf3f1-342e-490a-86e2-484d000fc31b'
-    }
-    };
-    liveCoins = await CircularJSON.stringyfi(axios(config));
-    liveCoins = JSON.parse(liveCoins)
-
-    return liveCoins;
-    
-}
 // Get crypto form extern api 
 /**
  * @swagger
@@ -30,12 +14,22 @@ async function getCrypto () {
  */
 router.get('/', async (req, res) => {
     try {
-      const coinFeed = await getCrypto();
-  
-      return res.status(200).json({
-        coinFeed,
-      });
+      const config = {
+        method: 'get',
+        url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?sort=cmc_rank&limit=100',
+        headers: { 
+          'X-CMC_PRO_API_KEY': 'd3bcf3f1-342e-490a-86e2-484d000fc31b'
+        }
+      };
+      const coinFeed = await axios(config)
+      
+        console.log(JSON.stringify(coinFeed.data));
+
+      return res.status(200).json(
+        coinFeed.data.data
+      );
     } catch (err) {
+      console.log(err);
       return res.status(500).json({
         err: err.toString(),
       });
