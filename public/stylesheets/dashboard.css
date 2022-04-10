@@ -4872,6 +4872,7 @@ input[type="button"].btn-block {
   flex: 1 1 auto;
   min-height: 1px;
   padding: 1.25rem;
+  background-color: rgb(10, 13, 48);
 }
 
 .card-title {
@@ -10243,6 +10244,7 @@ a:focus {
 
 #wrapper #content-wrapper #content {
   flex: 1 0 auto;
+  background-image: url(/images/bckg_img.png);
 }
 
 .container,

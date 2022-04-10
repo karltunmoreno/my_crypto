@@ -82,8 +82,8 @@
 .table-hover tbody tr:hover th {
   background-image: linear-gradient(
     180deg,
-    rgb(227, 168, 0, 0.3),
-    rgba(206, 25, 149, 0.3)
+    rgba(206, 25, 149, 0.3),
+    rgb(10, 13, 48, 0.3)
   );
 }
 /* main card styling */
