@@ -1,6 +1,6 @@
-<!-- Collapsable Card Example -->
+<!-- Collapsable Card Example
 <div class="card shadow mb-4">
-  <!-- Card Header - Accordion -->
+  <!-- Card Header - Accordion
   <a
     href="#collapseCardExample"
     class="d-block card-header py-3"
@@ -10,11 +10,61 @@
     aria-controls="collapseCardExample"
   >
     <h6 class="m-0 font-weight-bold text-primary">My Crypto Tools</h6>
-  </a>
-  <!-- Card Content - Collapse -->
+  </a> -->
+<!-- Card Content - Collapse
   <div class="collapse show" id="collapseCardExample">
     <div class="card-body">
-      {{> addBtn}}
     </div>
   </div>
+</div> -->
+
+<div class="container text-center text-blue">
+    <div class="row pt-5">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="display-4">My Crypto</h1>
+            <p class="font-italic mb-0">A Crypto Currency Portfolio </p>
+        </div>
+    </div>
+</div>
+
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-7 mx-auto">
+            <div class="card rounded-0 border-0 shadow">
+                <div class="card-body p-5">
+
+                    <!--  Bootstrap table-->
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Symbol</th>
+                                    <th scope="col">price</th>
+                                    <th scope="col">value</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    {{#each mycoin}}
+                                    <th scope="row">{{id}}</th>
+                                    <td>{{name}}</td>
+                                    <td>{{amount}}</td>
+                                    {{/each}}
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Add rows button-->
+                    <a class="btn btn-primary rounded-0 btn-block" id="insertRow" href="#">Add new row</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
