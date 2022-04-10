@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // const fetch = require('node-fetch');
 
 // async function getApiData() {
@@ -11,7 +10,6 @@
 
 
 // exports.coinsData = coinsData;
-=======
 //const fetch = require('node-fetch');
 const axios = require('axios');
 //const url = localhost;
@@ -29,6 +27,5 @@ async function getApiData() {
      
 }
 const coinsData = getApiData;
->>>>>>> f23f24ebf5e7513047f0afa30b4ddc22161c0f81
 
 
