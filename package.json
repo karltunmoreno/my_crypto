@@ -32,7 +32,11 @@
     "express-handlebars": "^6.0.3",
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
+<<<<<<< HEAD
+    "node-fetch": "^2.6.1",
+=======
     "node-fetch": "^2.6.7",
+>>>>>>> f23f24ebf5e7513047f0afa30b4ddc22161c0f81
     "nodemon": "^2.0.15",
     "post": "^0.0.1",
     "sequelize": "^6.17.0",
