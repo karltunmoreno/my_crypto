@@ -1,42 +1,59 @@
 <div class="coin-title-card">
-  <div class="card flex-fill" style="width: 18rem;">
-    <img
-      class="card-img-top"
-      src="/images/mc_banner.png"
-      alt="Card image cap"
-    />
-    <div class="card-body">
-      <h3 class="card-text">Coin Market</h3>
+    <div class="card flex-fill" style="width: 50rem;">
+        <img class="card-img-top"
+             src="/images/mc_banner.png"
+             alt="Card image cap" />
+        <div class="card-body">
+            <h3 class="card-text">Coin Market</h3>
+        </div>
     </div>
-  </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-offset-1 col-xl-12">
+            <div class="panel">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col col-md-3 col-xs-12">
+                            <h4 class="title"><span></span></h4>
+                        </div>
+                        <div class="col-sm-9 col-xs-12 text-right">
+                      
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Price</th>
+                                <th scope="col">24</th>
+                                <th scope="col">7D</th>
+                                <th scope="col">Market Cap</th>
+                                <th scope="col">Volume</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {{#each coin}}
+                            <tr>
+                                <th scope="row">{{cmc_rank}}</th>
+                                <td>{{name}}</td>
+                                <td input typeof="number" step="0.01">{{quote.USD.price}}</td>
+                                <td>{{quote.USD.percent_change_24h}}</td>
+                                <td>{{quote.USD.percent_change_7d}}</td>
+                                <td>{{quote.USD.market_cap}}</td>
+                                <td>{{quote.USD.volume_24h}}</td>
+                            </tr>
+                            {{/each}}
+                            >
+                        </tbody>
+                    </table>
+                </div>
+             </div>
+        </div>
+    </div>
 </div>
 
-<table class="table table-hover">
-    <thead class="thead-dark">
-        <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Price</th>
-            <th scope="col">24</th>
-            <th scope="col">7D</th>
-            <th scope="col">Market Cap</th>
-            <th scope="col">Volume</th>
-            <th scope="col">Circulating Supply</th>
-        </tr>
-    </thead>
-    
-    <tbody>
-        {{#each coin}}
-        <tr> 
-            <th scope="row">{{cmc_rank}}</th>
-            <td>{{name}}</td>
-            <td>{{quote.USD.price}}</td>
-            <td>{{quote.USD.percent_change_24h}}</td>
-            <td>{{quote.USD.percent_change_7d}}</td>
-            <td>{{quote.USD.market_cap}}</td>
-            <td>{{quote.USD.volume_24h}}</td>
-        </tr>
-        {{/each}}
-    </tbody>
-    
-</table>

@@ -1,4 +1,4 @@
-<html lang="en">
+﻿<html lang="en">
   <head>
 
     <meta charset="utf-8" />
@@ -11,7 +11,7 @@
     <meta name="author" content="amazing 4" />
 
     <title>My Crypto</title>
-    <link rel="icon" type="image/x-icon" href="/images/My Crypto (1).svg">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <!-- Custom fonts for this template-->
     <link
       href="vendor/fontawesome-free/css/all.min.css"
@@ -36,11 +36,11 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3 "><img src="/images/1a.png" alt="logo" width="75px" height="75px"></div>
+                <div class="sidebar-brand-text mx-3 "><img src="/images/logo_ltr.png" alt="logo" width="175px" height="75px"></div>
             </a>
 
             <!-- Divider -->
@@ -134,7 +134,7 @@
 
                     <!-- Topbar Search -->
                     <form></form>
-                        
+
                     </form>
 
                     <!-- Topbar Navbar -->
@@ -145,69 +145,63 @@
                         </li>
 
                         <!-- Nav Item - Alerts -->
-                        <li >
+                        <li>
                         </li>
 
                         <!-- Nav Item - Messages -->
-                        <li >
+                        <li>
                         </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
-                         <div class="dropdown show">
+                        <div class="dropdown show">
                             <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Login
+                                Login
                             </a>
 
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                           {{#if loggedIn}}
-                          <a class="dropdown-item" id="logout" href="/">Log Out</a>
-                            {{else}}
-                            <a class="dropdown-item" href="/login">Login</a>
-                             {{/if}}
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                {{#if loggedIn}}
+                                <a class="dropdown-item" id="logout" href="/">Log Out</a>
+                                {{else}}
+                                <a class="dropdown-item" href="/login">Login</a>
+                                {{/if}}
+                            </div>
                         </div>
-                        </div>  
-                            <!-- Dropdown - User Information -->
+                        <!-- Dropdown - User Information -->
                         {{!-- </li> --}}
 
                     </ul>
 
                 </nav>
                 <!-- End of Topbar -->
-      {{{body}}}
-     <footer class="text-center text-black" style="background-color: white;">
-  <!-- Grid container -->
-  <div class="container p-4"></div>
-  <!-- Grid container -->
-
-  <!-- Copyright -->
-  <div class="text-center p-3" style="background-color: rgba(206, 25, 149;">
-    © 2022 Copyright:
-    <a class="text-white" href="#">My Crypto</a>
-  </div>
-  <!-- Copyright -->
-</footer>
-    </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
-    <script src="/javascript/converter.js"></script>
-    {{#if loggedIn}}
-  <script src="/javascript/logout.js"></script>
-  {{/if}}
-  </body>
-</html>
+                {{{body}}}
+                <footer class="sticky-footer bg-white">
+                    <div class="container my-auto">
+                        <div class="copyright text-center my-auto">
+                            <span>Copyright &copy; My Crypto 2022</span>
+                        </div>
+                    </div>
+                </footer>
+                <!-- End of Footer -->
+        <script
+          src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+          integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+          integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+          crossorigin="anonymous"
+        ></script>
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+          integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+          crossorigin="anonymous"
+        ></script>
+        <script src="/javascript/converter.js"></script>
+        {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+      {{/if}}
+      </body>
+    </html>

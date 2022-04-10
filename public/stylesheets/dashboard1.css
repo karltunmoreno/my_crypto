@@ -39,12 +39,7 @@
     "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-    background: url('../images/bckg_img.png') no-repeat center center fixed;
-    -webkit-background-size:cover;
-    -moz-background-size:cover;
-    background-size:cover;
-    -o-background-size:cover;
+    "Liberation Mono", "Courier New", monospace;=
 }
 *,
 ::after,
@@ -86,11 +81,6 @@ body {
   line-height: 1.5;
   color: #858796;
   text-align: left;
-  background: url('../images/bckg_img.png') no-repeat center center fixed;
-  -webkit-background-size:cover;
-  -moz-background-size:cover;
-  background-size:cover;
-  -o-background-size:cover;
   background-color:rgb(4, 4, 4);
 }
 [tabindex="-1"]:focus:not(:focus-visible) {
@@ -172,7 +162,7 @@ sup {
   top: -0.5em;
 }
 a {
-  color: #3a7ac6;
+  color: #649fe7;
   text-decoration: none;
   background-color: transparent;
 }
@@ -543,7 +533,7 @@ pre code {
   .container-md,
   .container-sm,
   .container-xl {
-    max-width: 1140px;
+    max-width: 2290px;
   }
 }
 .row {
