@@ -37,14 +37,15 @@
           <div class="input-group mb-3">
             <label
               class="input-group-text"
-              for="inputGroupSelect01"
+              for="inputGroupSelect"
             >Coins</label>
-            <select class="form-select" id="inputGroupSelect01">
-              {{#each coins}}
-                <option value="1">{{name}}</option>
+            <select class="form-select" id="inputGroupSelect">
+              {{#each coin}}
+                <option value={{id}}>{{name}}</option>
               {{/each}}
             </select>
-
+            <br>
+                       
             {{! <div class="form-group">
               <label for="exampleFormControlTextarea1">Example textarea</label>
               <textarea
@@ -54,6 +55,13 @@
               ></textarea>
             </div> }}
 
+          </div>
+          <div class="input-group mb-3">
+            <label
+             class="input-group-text"
+             for="inputGroupAmount"
+            >Amount</label>
+            <input id="inputGroupAmount" type="number">
           </div>
 
         </div>

@@ -16,7 +16,7 @@ router.get('/', async (req, res) => {
     try {
       const config = {
         method: 'get',
-          url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?cryptocurrency_type=coins&aux=cmc_rank&limit=100',
+          url: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?cryptocurrency_type=coins&aux=cmc_rank&limit=1',
         headers: { 
           'X-CMC_PRO_API_KEY': 'd3bcf3f1-342e-490a-86e2-484d000fc31b'
         }
