@@ -33,6 +33,7 @@
     "express-session": "^1.17.2",
     "mysql2": "^2.3.3",
     "node-fetch": "^2.6.7",
+    "node-require": "^0.0.10",
     "nodemon": "^2.0.15",
     "post": "^0.0.1",
     "sequelize": "^6.17.0",
