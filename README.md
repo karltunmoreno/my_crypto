@@ -1,4 +1,5 @@
 # my_crypto
+My_Crypto is an application to view and track cryptocurrency
 <!-- Project Shields -->
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
