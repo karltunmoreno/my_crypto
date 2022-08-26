@@ -2,9 +2,7 @@
 My_Crypto is an application to view and track cryptocurrency
 <!-- Project Shields -->
 
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
-[![LinkedIn][linkedin-shield]][linkedin-url1]
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
@@ -125,7 +123,6 @@ Used Node.js to create an application that uses technologies like axios, handleb
 
 ### Links
 * Heroku: https://fathomless-ocean-39616.herokuapp.com/
-* Project Link: https://github.com/aaguirre7/my_crypto
 
 Thank you for taking time looking at this page.
 
@@ -136,11 +133,9 @@ Happy painting!
 <!-- CONTACT -->
 ## Contact
 
-Abraham Aguirre Aguirre.Abraham@gmail.com
+<!-- CONTACT -->
+## Contact
 
-<!-- MARKDOWN LINKS & IMAGES -->
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/abraham-aguirre-1b237293/
-[linkedin-url1]: https://www.linkedin.com/in/julianesquivel/
-[product-screenshot1]: ./public/assets/images/screenshot_1.png
-[
+Karltun Moreno at Karltunmoreno@gmail.com
+
+
