@@ -120,6 +120,7 @@ Used Node.js to create an application that uses technologies like axios, handleb
 ### Contributors
 * Abraham Aguirre 
 * Julian Esquivel
+* Karltun Moreno
 
 ### Links
 * Heroku: https://fathomless-ocean-39616.herokuapp.com/
